@@ -1,0 +1,8 @@
+<div class="round-corners gradient center text-white">
+  <h1>Tip of the day</h1>
+  <h3>Click the button for a tip for the day!</h3>
+
+  <%= link_to "Request tip!", tips_daily_random_tip_path, class: "btn round-corners", data: { turbo_frame: "daily_tip" }  %>
+
+  <%= render "daily_tip", tip_text: @daily_tip&.content %>
+</div>
